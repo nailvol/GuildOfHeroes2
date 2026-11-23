@@ -1,29 +1,55 @@
-﻿// Game koch = new Game("koch run", "16.10.2077", "runner", 100.0);
+﻿Game witcher = new Game("Ведьмак 3", "2015", "RPG", 9.3);
 
-// Console.WriteLine(">>> игра 1 <<<");
-// Console.WriteLine($"название: {koch.Name}");
-// Console.WriteLine($"жанр: {koch.    Genre}");
-// Console.WriteLine($"дата релиза: {koch.Releasedate}");
-// Console.WriteLine($"рейтинг: {koch.rating}");
+Console.WriteLine($"Рейтинг игры «{witcher.Name}» до вызова: {witcher.rating}");
+
+// Допустимый вызов
+witcher.updateRating(9.8);
+Console.WriteLine($"После допустимого обновления: {witcher.rating}");
+
+// Недопустимый вызов (рейтинг выше 10)
+witcher.updateRating(15.0);
+Console.WriteLine($"После недопустимого обновления: {witcher.rating}");
+
+
+// Hero yaroslav = new Hero("Ярослав", 100);
+// Hero anastasia = new Hero("Анастасия", 90);
+// Hero artem = new Hero("Артём", 120);
+
+// Console.WriteLine($"До вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
+
+// yaroslav.TakeDamage(25);
+// anastasia.TakeDamage(30);
+
+// Console.WriteLine($"После вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
+
+// yaroslav.TakeDamage(-20);
+// Console.WriteLine($"После неверного урона: {yaroslav.Health}");
+
+// artem.TakeDamage(200);
+// Console.WriteLine($"После сильного урона, Артём: {artem.Health}");
+
+// yaroslav.Heal(10);
+// yaroslav.GainExperience(40);
+// yaroslav.GainExperience(25);
+
+// Console.WriteLine($"После лечения, Ярослав: {yaroslav.Health}");
+// Console.WriteLine($"Опыт Ярослава: {yaroslav.Experience}");
+
+// bool yaroslavAlive = yaroslav.IsAlive();
+// Console.WriteLine($"Ярослав жив: {yaroslavAlive}");
+// Console.WriteLine($"Артём жив: {artem.IsAlive()}");
+
+// if (yaroslavAlive) {
+//     Console.WriteLine("Ярослав может продолжать приключение.");
+// } else {
+//     Console.WriteLine("Ярослав больше не может сражаться.");
+// }
+
+// string info = yaroslav.GetInfo();
+// Console.WriteLine("Строка получена. Сейчас выведем её:");
+// Console.WriteLine(info);
 
 // Console.WriteLine();
-
-Hero yaroslav = new Hero("Ярослав", 100);
-Hero anastasia = new Hero("Анастасия", 90);
-Hero artem = new Hero("Артём", 120);
-Console.WriteLine($"До вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
-
-yaroslav.TakeDamage(25);
-anastasia.TakeDamage(30);
-
-Console.WriteLine($"После вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
-yaroslav.TakeDamage(-20);
-Console.WriteLine($"После неверного урона: {yaroslav.Health}");
-
-artem.TakeDamage(200);
-Console.WriteLine($"После сильного урона, Артём: {artem.Health}");yaroslav.Heal(10);
-yaroslav.GainExperience(40);
-yaroslav.GainExperience(25);
-
-Console.WriteLine($"После лечения, Ярослав: {yaroslav.Health}");
-Console.WriteLine($"Опыт Ярослава: {yaroslav.Experience}");
+// Console.WriteLine(anastasia.GetInfo());
+// Console.WriteLine();
+// Console.WriteLine(artem.GetInfo());
